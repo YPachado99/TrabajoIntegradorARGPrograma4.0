@@ -5,19 +5,22 @@ const users_github = () => {
     const array_users = [
         {
             'nombre':'Joaquin Lucero',
-            'foto':'https://unavatar.io/github/demonjl'
+            'foto':'https://unavatar.io/github/demonjl',
+            'url':'https://github.com/demonjl'
         },
         {
             'nombre':'Yonathan Pachado',
-            'foto':'https://unavatar.io/github/YPachado99'
+            'foto':'https://unavatar.io/github/YPachado99',
+            'url':'https://github.com/YPachado99'
         },
         {
             'nombre':'Martin Laurito',
-            'foto':'https://unavatar.io/github/Kronix229'
+            'foto':'https://unavatar.io/github/Kronix229',
+            'url':'https://github.com/Kronix229'
         }
     ]
 
-    array_users.forEach((value,index)=>{
+    array_users.forEach(value=>{
 
         let url_split = value.foto.split('/')
         let url_name = url_split[url_split.length - 1]
@@ -27,15 +30,17 @@ const users_github = () => {
         let etiqueta_img = $('<img>').attr({'src':`${value.foto}`,'alt':`${value.nombre}`});
         let span_name = $('<span>').attr('class','api-user__name');
         let span_position = $('<span>').attr('class','api-user__position');
+        let etiqueta_a = $('<a>').attr({'href':`${value.url}`,'target':'_blank'});
 
         span_name.text(`${value.nombre}`);
         span_position.text('Owner');
 
         div.append(etiqueta_img);
-        li.append(div);
-        li.append(span_name);
-        li.append(span_position);
-
+        
+        etiqueta_a.append(div);
+        etiqueta_a.append(span_name);
+        etiqueta_a.append(span_position);
+        li.append(etiqueta_a);
         users_api__list.append(li);
     })
 }
