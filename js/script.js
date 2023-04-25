@@ -21,9 +21,6 @@ const users_github = () => {
     ]
 
     array_users.forEach(value=>{
-
-        let url_split = value.foto.split('/')
-        let url_name = url_split[url_split.length - 1]
         
         let li = $('<li>').attr('class','api-user__content');
         let div = $('<div>').attr('class','api-user__img');
