@@ -542,26 +542,6 @@
   color: #888888;
   padding: 30px;
 }
-.form-wizard .wizard-form-radio {
-  display: inline-block;
-  margin-left: 5px;
-  position: relative;
-}
-.form-wizard .wizard-form-radio input[type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  background-color: #dddddd;
-  height: 25px;
-  width: 25px;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 50%;
-  position: relative;
-  cursor: pointer;
-}
 .form-wizard .form-wizard-header {
   text-align: center;
 }
