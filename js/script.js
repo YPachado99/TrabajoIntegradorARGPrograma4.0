@@ -83,7 +83,6 @@ $(document).on("scroll", () => {
 });
 $("#textomostrar").hide();
   $("#Mostrar").hide();
-  $("#finWizard").hide();
   $("#Ocultar").on("click", function () {
     $(".wizard-section").hide();
     $("#textomostrar").show();
